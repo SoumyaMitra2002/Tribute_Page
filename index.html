@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Tribute Page</title>
+    <style>
+        .main {
+
+            padding: 10px;
+            display: flex;
+            background-color: black;
+            color: cyan;
+        }
+
+        .container_second {
+            background-color: blue;
+            display: flex;
+        }
+
+        .container_third {
+            background-color: #fc03f8;
+            display: flex;
+        }
+
+        .container_fourth {
+            background-color: #54f542;
+            display: flex;
+        }
+
+        .container_fifth {
+            background-color: aqua;
+            display: flex;
+        }
+
+        .un {
+            /* border: 2px solid blue; */
+        }
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .text {
+            margin-left: 50px;
+        }
+
+        .personal {
+            margin-top: 15px;
+        }
+
+        h1 {
+            border-bottom: 2px solid yellow;
+            width: 230px;
+        }
+
+        .career {
+            border-bottom: 2px solid yellow;
+            width: 120px;
+            color: rgb(241, 247, 241);
+        }
+
+
+        .career1 {
+            border-bottom: 2px solid #fcfc03;
+            width: 130px;
+            color: #fc0303;
+            display: inline;
+
+        }
+
+        .death {
+            width: 110px;
+        }
+
+        .awards {
+            color: #f56c42;
+            width: 110px;
+            text-align: center;
+        }
+
+        .Facts {
+            width: 90px;
+        }
+
+        .collabo {
+            display: inline;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table td,
+        .table th {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .table th {
+            background-color: darkblue;
+            color: #ffffff;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /*responsive*/
+
+        @media(max-width: 500px) {
+            .table thead {
+                display: none;
+            }
+
+            .table,
+            .table tbody,
+            .table tr,
+            .table td {
+                display: block;
+                width: 100%;
+            }
+
+            .table tr {
+                margin-bottom: 15px;
+            }
+
+            .table td {
+                text-align: right;
+                padding-left: 50%;
+                text-align: right;
+                position: relative;
+            }
+
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+
+
+        @media (max-width: 767px) {
+            .main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Kishore Kumar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Intro<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Career</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Personal Life</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Facts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Award</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Death</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- header -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="width: 700px; height: 500px;"
+                    src="data:image/jpeg;base64,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"
+                    alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" style="width: 700px; height: 500px;"
+                    src="data:image/jpeg;base64,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"
+                    alt="Second slide">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div> -->
+    <!-- Close-header -->
+
+    <div class="containe main">
+
+        <div class="text">
+            <div id="Y">
+                <h1>Introduction</h1>
+            </div>
+            <div>
+                <p style="font-family: 'Borel', cursive;">
+                    Kishore Kumar (born Abhas Kumar Ganguly,4 August 1929 – 13 October 1987) was
+                    an
+                    Indian playback singer, musician and actor. He is widely regarded as one of the greatest, most
+                    influential and dynamic singers in the history of Indian music. Kumar was one of the most
+                    popular singers in the Indian subcontinent, notable for his yodeling and ability to sing songs in
+                    different
+                    voices. He used to sing in different genres but some of his rare compositions, considered classics,
+                    were
+                    lost in time.
+
+                    Besides Hindi, he sang in many other Indian languages, including Bengali, Marathi, Assamese,
+                    Gujarati,
+                    Kannada, Bhojpuri, Malayalam, Odia and Urdu.He also released a few non-film albums in multiple
+                    languages, especially in Bengali, which are noted as all-time classics.According to his brother and
+                    legendary actor Ashok Kumar, Kishore Kumar was successful as a singer because his "voice hits the
+                    mike,
+                    straight, at its most sensitive point".
+
+                    Kumar was also active in acting too. His first film appearance was in Shikari (1946), in which his
+                    brother,
+                    Ashok played the lead role. Kumar played his first lead in the Bombay Talkies film Andolan (1951).
+                    Although
+                    he got some acting assignments with the help of his brother, he was more interested in becoming a
+                    singer.
+                    After the success of films such as Ladki, Char Paise and Baap Re Baap that Kumar developed an
+                    interest
+                    in
+                    acting seriously, which resulted in him having successful films as the lead actor between 1955 and
+                    1966.
+                    Kumar starred in Bimal Roy's Naukari (1954) and Hrishikesh Mukherjee's directorial debut Musafir
+                    (1957).
+
+                    As an actor, his best period was between 1954 and 1968. He won 8 Filmfare Award for Best Male
+                    Playback
+                    Singer out of 28 nominations and holds the record for winning and nominating the most Filmfare
+                    Awards in
+                    that category.He was awarded the Lata Mangeshkar Award by the Madhya Pradesh government in 1985. In
+                    1997, the Madhya Pradesh Government initiated an award called the "Kishore Kumar Award" for
+                    contributions to
+                    Hindi cinema. In 2012, his unreleased last song sold for ₹15.6 lakh at the Osian's Cinefan Auction
+                    in
+                    New
+                    Delhi.
+                </p>
+            </div>
+        </div>
+        <div class="img text">
+            <div class="un">
+                <img class="image" src="img/kishore-kumar.jpg" />
+            </div>
+            <div class="un">
+                <h3>Kishor Kumar</h1>
+                    <h4>Born:xxxxxx</h2>
+                        <h4>Death:xxxxxx</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container_second ">
+        <div class="img text">
+            <div class="un2">
+                <img class="image2" src="img/kishore.jpg" />
+            </div>
+        </div>
+
+        <div class="text">
+            <div id="Y">
+                <h1 class="career">Career</h1>
+            </div>
+            <div>
+                <p style="color: white; font-family: 'Borel', cursive;">
+                    After Ashok Kumar became a star of Hindi films, the Ganguly family visited Bombay (now Mumbai)
+                    regularly. Abhas Kumar changed his name to 'Kishore Kumar' and started his cinema career as a chorus
+                    singer at Bombay Talkies, where his brother worked. Music director Khemchand Prakash gave Kumar a
+                    chance to sing "Marne Ki Duayen Kyon Mangu" for the film Ziddi (1948). After this, Kumar was offered
+                    many other assignments, but he was not very serious about a film career.In 1949, he settled in
+                    Bombay.
+
+                    During the initial stage of his career, Kumar was deeply inspired by singer K. L. Saigal and
+                    imitated his style of singing in some of his early films but later evolved his own, unique
+                    style.He had a great respect for poet and musician Rabindranath Tagore who influenced him in
+                    many ways.
+
+                    He was an ardent admirer of Hollywood actor-singer Danny Kaye. He hung the portraits of all these
+                    three personalities at his Gouri Kunj residence and would bow respectfully before them everyday as a
+                    rule.
+
+                    In his later career, Kumar was also heavily influenced by playback singer Ahmed Rushdi and his
+                    liking towards Rushdi was to the extent that former paid a tribute at Royal Albert Hall in London to
+                    the latter by singing some of his songs.
+
+                    Kumar employed yodeling in many of his songs including; Yeh dil na hota bechara, Zindagi ek safar
+                    hai suhana, and Chala jata hoon. The style eventually became an essential feature of his singing and
+                    was inspired by Jimmie Rodgers and Tex Morton.
+
+                    In the movie Half Ticket, for one of the songs – "Aake Seedhi Lagi Dil Pe" – the music director
+                    Salil Chowdhary had a duet in mind and wanted Kumar and Lata Mangeshkar to sing the song. However,
+                    since Lata Mangeshkar was not in town and Salil Chowdhury had to record that song before she could
+                    return, Kumar solved the problem by singing both the male and female parts of the song himself. The
+                    duet is actually for Pran and Kumar on the screen dressed as a woman. It just turned out to be fine
+                    as he did admirably well singing both in male and female voices.
+
+                    Music director S. D. Burman is credited with spotting Kumar's talent for singing. During the making
+                    of Mashaal (1950), Burman visited Ashok's house, where he heard Kumar imitating K. L. Saigal. He
+                    complimented him and told him that he should develop a style of his own, instead of copying
+                    Saigal. Kumar eventually developed his own style of singing, which featured yodeling, which he
+                    had heard on the records of Tex Morton and Jimmie Rodgers.S. D. Burman kept making Kishore
+                    sing for Dev Anand from the 50s to the early 70s. S. D. Burman provided him the training and
+                    encouraged Kumar a lot, especially in the late 50s and early 60s, resulting in Kumar developing into
+                    a great singer in the future years.
+
+                    S. D. Burman recorded Kumar's voice for Dev Anand's Munimji (1954), Taxi Driver (1954), House No. 44
+                    (1955), Funtoosh (1956), Nau Do Gyarah (1957), Paying Guest (1957), Guide (1965), Jewel Thief
+                    (1967), Prem Pujari (1970), and Tere Mere Sapne (1971). He also composed music for Kumar's home
+                    production Chalti Ka Naam Gaadi (1958). Some of their songs were "Maana Janaab Ne Pukara Nahin" from
+                    Paying Guest (1957), "Hum Hain Rahi Pyar Ke" from Nau Do Gyarah (1957), "Ai Meri Topi Palat Ke Aa"
+                    from Funtoosh (1956), and "Ek Ladki Bheegi Bhaagi Si" from Chalti Ka Naam Gaadi.Asha Bhosle and
+                    Kishore performed duets composed by Burman including "Chhod Do Aanchal" from Paying Guest (1957),
+                    "Ankhon Mein Kya Ji" from Nau Do Gyarah (1957), "Haal Kaisa Hai Janaab Ka" and "Paanch Rupaiya Baara
+                    Aana" from Chalti Ka Naam Gaadi (1958) and "Arre Yaar Meri Tum Bhi Ho Gajab" from Teen Deviyan
+                    (1965).
+
+                    As a singer, Kumar's work with many music directors in this period includes "Ye Raatein Ye Mausam"
+                    and "Hum Toh Mohabbat Karega" from Dilli Ka Thug, "Piya Piya Mora Jiya" from Baap Re Baap, "Hello
+                    Hello Ji" from Bombay Ka Chor, "Michael Hai To Cycle Hai" from Bewaqoof, "Ae Haseeno Nazneeno" from
+                    Chacha Zindabad, "Zaroorat Hai Zaroorat Hai" from Manmauji (1961), "Likha Hai Teri Ankhon Mein" from
+                    Teen Deviaan, "Suno Jaana Suno Jaana", "Pyaar Baatke Chalo" and "Kya Teri Zulfein Hai" from Hum Sab
+                    Ustaad Hai, "Khoobsurat Haseena" from Mr. X in Bombay, "Gaata Rahe Mera Dil" from Guide (1965),
+                    "Sultana Sultana" from Shreeman Funtoosh, "Machalti Hui" from Ganga Ki Lahren, "Mera Dil Meri Jaan"
+                    and "Pyar Ka Jaahan Hotel" from Jaalsaaz and "Yeh Dil Na Hota Bechara" from Jewel Thief (1967).
+
+                    Music director C. Ramchandra also recognized Kumar's talent as a singer.They collaborated on
+                    songs including "Eena Meena Deeka" from Aasha (1957). Kumar's work includes "Nakhrewaali" from New
+                    Delhi (1956) by Shankar Jaikishan, "C.A.T. Cat Maane Billi" and "Hum To Mohabbat Karega" from Dilli
+                    Ka Thug (1958) by Ravi, and "Chhedo Na Meri Zulfein" from Ganga Ki Lahren (1964) by Chitragupta.
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="container_third ">
+        <div class="text3">
+            <div id="Y">
+                <h1 class="career1">Personal Life</h1>
+            </div>
+            <div class="personal">
+                <p style="color: black; font-family: 'Borel', cursive;">
+                    Kumar married four times. His first wife was Bengali singer and actress Ruma Guha Thakurta aka Ruma
+                    Ghosh. Their marriage lasted from 1950 to 1958.
+
+                    Kumar's relationship with actress Madhubala was the subject of much media attention. Madhubala
+                    had worked with Kumar in many films including his home production Chalti Ka Naam Gaadi (1958) and
+                    Jhumroo (1961). According to Madhubala's sister Madhur Bhushan, after Madhubala's relationship
+                    with actor Dilip Kumar faded, Madhubala got involved with Kishore who was going through a divorce
+                    with Ruma Guha Thakurta. Their love affair went on for three years through Chalti Ka Naam Gaadi and
+                    Half Ticket. Madhubala was ill and was planning to go to London for treatment. She had a
+                    ventricular septal defect (hole in the heart). The couple had a civil wedding in 1960 and Kumar
+                    reportedly converted to Islam and changed his name to Karim Abdul. His parents refused to attend
+                    the ceremony. The couple also had a Hindu ceremony to please Kumar's parents. Their marriage ended
+                    with Madhubala's death on 23 February 1969.
+
+                    Kumar's third marriage was to Yogeeta Bali, and lasted from 1976 to 4 August 1978. Kumar was married
+                    to Leena Chandavarkar from 1980 until his death. He had two sons, Amit Kumar with Ruma, and Sumit
+                    Kumar with Leena Chandavarkar.
+
+                    Kumar is said to have been paranoid about not being paid. During recordings, he would sing only
+                    after his secretary confirmed that the producer had made the payment. On one occasion, when he
+                    discovered that his dues had not been fully paid, he appeared on set with makeup on only one side of
+                    his face. When the director questioned him, he replied "Aadha paisa to aadha make-up." (Half make-up
+                    for half payment). On the sets of Bhai Bhai, Kumar refused to act because the director M. V.
+                    Raman owed him ₹ 5,000. Ashok Kumar persuaded him to do the scene but when the shooting started,
+                    Kishore walked a few paces and said, Paanch Hazaar Rupaiya (five thousand rupees) and did a
+                    somersault. After he reached the end of the floor, he left the studio. On another occasion, when
+                    producer R.C. Talwar did not pay his dues in spite of repeated reminders, Kumar arrived at Talwar's
+                    residence shouting "Hey Talwar, de de mere aath hazaar" ("Hey Talwar, give me my eight thousand")
+                    every morning until Talwar paid up.
+
+                    In spite of his "no money, no work" principle, sometimes Kumar recorded free even when the producers
+                    were willing to pay. Such films include those produced by Rajesh Khanna and Danny Denzongpa.On
+                    one occasion, Kishore helped actor-turned-producer Bipin Gupta by giving him ₹ 20,000 for the film
+                    Daal Me Kala (1964). When actor Arun Kumar Mukherjee—one of the first persons to appreciate
+                    Kishore's singing talent—died, Kumar regularly sent money to Mukherjee's family in Bhagalpur.
+
+                    According to Kumar's eldest son Amit Kumar, Kumar did a lot of charity and free shows for jawans and
+                    cancer patients but he never spoke about it. Kumar was a homebody and avoided the trappings of
+                    stardom. He was an early riser and went to bed early. He loved authentic Bengali food, and was
+                    deeply emotional, a side which he seldom expressed and was also philosophic. Kumar was fond of
+                    Biblical films and liked sitting in a cemetery.
+
+                    The film Anand (1971) was originally supposed to star Kishore and Mehmood Ali in the lead.
+                    Hrishikesh Mukherjee, the director of the film, was asked to meet Kishore to discuss the project.
+                    However, when he went to Kumar's house he was driven away by the gatekeeper due to a
+                    misunderstanding. Kumar—himself a Bengali—had not been paid for a stage show organized by another
+                    Bengali man and had instructed his gatekeeper to drive away this "Bengali", if he ever visited the
+                    house. Consequently, Mehmood had to leave the film as well, and new actors (Rajesh Khanna and
+                    Amitabh Bachchan) were signed up for the film.
+            </div>
+
+
+        </div>
+        <div class="img_text mr-2 mt-3">
+            <div class="un3">
+                <img class="image2" src="img/Kishore3.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container_fourth">
+        <div class="img_text4">
+            <div class="un4 mb-2 mt-2 mr-4 mf-4">
+                <img class="image2" src="img/Kishore3.jpg" />
+            </div>
+        </div>
+        <div class="text4">
+            <div id="Y">
+                <h1 class="Facts">Facts</h1>
+            </div>
+
+            <div class="facts">
+                <ul class="facts1" style="font-family: 'Borel', cursive;">
+                    <li>
+                        Kumar was commemorated on his 85th birth anniversary by Search Engine Google which showed a
+                        special doodle on its Indian home page for him on 4 August 2014.
+                    </li>
+                    <li>
+                        Kumar's song "Pal Bhar Ke Liye" from the film Johny Mera Naam (1970) was used in an episode of
+                        The Simpsons titled "Kiss Kiss, Bang Bangalore". His songs have also been featured in
+                        several films, including Such a Long Journey (1998) and Side Streets (1998).
+                    </li>
+                    <li>
+                        In 1996, nine years after his death, Kumar's vocals from the song Saala Main Toh Saab Ban Gaya
+                        were used in the movie, Raja Hindustani and picturised on Aamir Khan. Kumar originally sung it
+                        for Dilip Kumar and it is from the film, Sagina.
+                    </li>
+                    <li>
+                        The Bengali drama movie Kishore Kumar Junior directed by Kaushik Ganguly was dedicated to Kumar
+                        and his fans.
+                    </li>
+                    <li>
+                        A Bengali chart buster song "Amar Shilpi Tumi Kishore Kumar" sung by singer Kumar Sanu was
+                        dedicated to the memory of Kishore.
+                    </li>
+                    <li>
+                        Kumar's song "Yeh Jawani Hai Deewani" from the film Jawani Diwani(1972) was recreated in the
+                        2019 movie Student of the Year 2, a sequel to Student of the Year, with music composed by
+                        Vishal–Shekhar, and sung by Vishal Dadlani and Payal Dev, and Kishore Kumar (only singing the
+                        lyric tune of Yeh Jawani Hai Deewani).
+                    </li>
+                    <li>
+                        An official biopic on his life and times is being made by director Anurag Basu, which stars
+                        Ranbir Kapoor as Kishore Kumar.
+                    </li>
+                </ul>
+                <p class="Singers">
+                <h1 class="collabo">Collaboration with other singers</h1><br>
+                <div class="topics mt-2" style="font-family: 'Borel', cursive;">
+                    <strong>Bhajans</strong><br>
+
+                    Kishore Kumar sang Bhajans like "Aao Kanhai Mere Dham" from Mere Jeevan Saathi (1972), "Devi Mata
+                    Rani" from Swarag Se Sunder (1986), "Jai Bholenath Jai Ho Prabhu" from Kunwara Baap (1974), "He Re
+                    Kanhaiya" from Chhoti Bahu (1971), "Jab Ram Naam Le Le" from Abhi Toh Jee Le (1977), "Kahe Apno K
+                    Kaam Nahi Aye Tu" from Raampur Ka Lakshman (1972), "Krishna Krishna, Bolo Krishna" from Naya Din Nai
+                    Raat (1974), "Prabhuji Teri Leela Aparampaar" from Humsafar (1953) etc.
+
+                    <br><strong>Qawwali</strong><br>
+
+                    Kishore Kumar recorded Qawwalis like all time hit "Vaada Tera Vaada" from Dushman (1971), "Hum Toh
+                    Jhuk Kar Salam Karte Hai" from Fakira (1976), "Mehfil Mein Paimana Jo Laga Jhumne" from Chunaoti
+                    (1980), "Is Ishq Mein" from Mr. Romeo (1974), "Kya Cheez Hai Aurat Duniya Mein" from Zorro (1975),
+                    "Haal Kya Hai Dilon Ka" from Anokhi Ada (1973), a semi qawwali "Jab Se Sarkar Ne Nashabandi Tod Di"
+                    from 5 Rifles (1974), the chart buster qawwali "Qurbani Qurbani Qurbani" from Qurbani (1980)
+                    etc.
+
+                    <br><strong>Ghazals</strong><br>
+
+                    Kishore Kumar sang Ghazals like "Peechhli Yaad Bhula Do" from Mehndi (1983), "Aisi Haseen Chandni"
+                    from Dard (1981), "Yun Neend Se Woh Jaan-E-Chaman" from Dard Ka Rishta (1982), "Tera Chehra Mejhe
+                    Gulab Lage" from Aapas Ki Baat (1981) etc.
+                </div>
+
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="Y">
+        <center>
+            <h1 class="awards mt-5">Award</h1>
+        </center>
+
+    </div>
+
+
+    <table class="table" style="background-color: #fc03f8;">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Song</th>
+                <th>Film</th>
+                <th>Music Director</th>
+                <th>Lyricist</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="S.No">1970</td>
+                <td data-label="Name">Roop Tera Mastana</td>
+                <td data-label="Age">Aradhana</td>
+                <td data-label="Marks%">Sachin Dev Burman</td>
+                <td data-label="Staus">Anand Bakshi</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1976</td>
+                <td data-label="Name">Dil Aisa Kisi Ne Mera</td>
+                <td data-label="Age">Amanush</td>
+                <td data-label="Marks%">Shyamal Mitra</td>
+                <td data-label="Staus">Indeevar</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1979</td>
+                <td data-label="Name">Khaike Paan Banaras Wala</td>
+                <td data-label="Age">Don</td>
+                <td data-label="Marks%">Kalyanji Anandji</td>
+                <td data-label="Staus">Anjaan</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1981</td>
+                <td data-label="Name">Hazaar Raahen Mudke Dekheen</td>
+                <td data-label="Age">Thodisi Bewafaii</td>
+                <td data-label="Marks%">Khayyam</td>
+                <td data-label="Staus">Gulzar</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1983</td>
+                <td data-label="Name">Pag Ghungroo Baandh</td>
+                <td data-label="Age">Namak Halaal</td>
+                <td data-label="Marks%">Bappi Lahiri</td>
+                <td data-label="Staus">Anjaan</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1984</td>
+                <td data-label="Name">Agar Tum Na Hote</td>
+                <td data-label="Age">Agar Tum Na Hote</td>
+                <td data-label="Marks%">Rahul Dev Burman</td>
+                <td data-label="Staus">Gulshan Bawra</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1985</td>
+                <td data-label="Name">Manzilein Apni Jagah Hain</td>
+                <td data-label="Age">Sharaabi</td>
+                <td data-label="Marks%">Bappi Lahiri</td>
+                <td data-label="Staus">Prakash Mehra</td>
+            </tr>
+
+            <tr>
+                <td data-label="S.No">1986</td>
+                <td data-label="Name">Saagar Kinaare</td>
+                <td data-label="Age">Saagar</td>
+                <td data-label="Marks%">Rahul Dev Burman</td>
+                <td data-label="Staus">Javed Akhtar</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="container_fifth " style="width: 100%;">
+        <div class="text5">
+            <div id="Y">
+                <h1 class="death">Death</h1>
+            </div>
+            <div class="personal">
+                <p style="color: black; font-family: 'Borel', cursive;">
+                    By September 1987, Kishore Kumar had decided to retire as he was unhappy with kind of songs and
+                    tunes being made by music directors and was planning to return to his birthplace Khan.
+
+                    On 13 October 1987, his brother Ashok Kumar's 76th birthday, he died of a heart attack in Bombay
+                    at 4:45 pm. His body was taken to Khandwa for cremation. Kishore had recorded his last song,
+                    "Guru Guru", a duet with Asha Bhosle for the film Waqt Ki Awaz (1988) composed by Bappi Lahiri
+                    for Mithun Chakraborty and Sridevi, the day before he died.
+
+                    Recalling the day of Kishore Kumar's death and his last lines before he took his last breath,
+                    his wife Leena Chandavarkar was quoted as saying: "On the morning of October 13 (the day Kishore
+                    Kumar passed away in 1987), he looked pale and as though in deep sleep. As I went near him, he
+                    woke up and asked, 'Did you get scared? Today is my holiday'." That day he had several meetings
+                    at home. During lunch he told me that we'd watch the film River of No Return in the evening. A
+                    little later, I heard him move furniture in the next room. When I went to see what was
+                    happening, I saw him lying on the bed. Nervously he said, 'I'm feeling weak'. I ran to call the
+                    doctor. He got angry and said, 'If you call the doctor, I'll get a heart-attack'. Those were his
+                    last lines. His eyes were wide open and he was breathing out. I thought he was fooling as usual
+                    but that was the end.
+                </p>
+            </div>
+        </div>
+    </div>
+                
+
+                    <!-- Footer -->
+                    <footer class="page-footer font-small blue" style="background-color: black;">
+
+                        <!-- Copyright -->
+                        <div class="footer-copyright text-center py-3" style="color: white;">© 2023 Copyright by :Soumyadeep Mitra
+                        </div>
+                        <!-- Copyright -->
+
+                    </footer>
+                    <!-- Footer -->
+              
+
+
+
+
+
+                    <!-- Optional JavaScript -->
+                    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                        crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                        crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                        crossorigin="anonymous"></script>
+</body>
+
+</html>
